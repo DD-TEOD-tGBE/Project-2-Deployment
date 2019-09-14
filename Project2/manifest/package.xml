@@ -40,6 +40,7 @@
     <types>
         <members>Questions__c</members>
         <members>Quiz__c</members>
+        <members>AccountQuiz_c</members>
         <name>CustomTab</name>
     </types>
     <types>

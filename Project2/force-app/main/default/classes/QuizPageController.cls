@@ -12,7 +12,7 @@ public string choice {get;set;}
 
       public QuizPageController() {
         q = [SELECT id, Name FROM Quiz__c];
-        ques = [SELECT Name ,A__c,B__c,C__c,D__c,CorrectAnswer__c FROM Questions__c WHERE Quiz__c IN :q LIMIT :limitSize OFFSET :count ];
+        ques = [SELECT Name ,Right_Answer__c, Wrong_Answer_1__c,  Wrong_Answer_2__c,  Wrong_Answer_3__c FROM Questions__c WHERE Quiz__c IN :q LIMIT :limitSize OFFSET :count ];
         totalrecs=ques.size();
 
         
@@ -38,10 +38,10 @@ public string choice {get;set;}
     
     public List<SelectOption> getAnswers() {
         List<SelectOption> options = new List<SelectOption>(); 
-        options.add(new SelectOption('A',Ques[count].a__c)); 
-        options.add(new SelectOption('B',Ques[count].b__c)); 
-        options.add(new SelectOption('C',Ques[count].c__c)); 
-        options.add(new SelectOption('D',Ques[count].d__c)); 
+        options.add(new SelectOption('A',Ques[count].Right_Answer__c)); 
+        options.add(new SelectOption('B',Ques[count].Wrong_Answer_1__c)); 
+        options.add(new SelectOption('C',Ques[count].Wrong_Answer_2__c)); 
+        options.add(new SelectOption('D',Ques[count].Wrong_Answer_3__c)); 
         return options; 
     }
     
@@ -53,7 +53,7 @@ public string choice {get;set;}
     }
 
     public PageReference next(){
-        if(choice == ques[count].CorrectAnswer__c){
+        if(choice == ques[count].Right_Answer__c){
             score++;
 
         System.debug('score:'+score);
@@ -84,7 +84,7 @@ public string choice {get;set;}
     }
 
     public void submit(){
-        if(choice == ques[count].CorrectAnswer__c){
+        if(choice == ques[count].Right_Answer__c){
             score++;
         }
         System.debug('score:'+score);

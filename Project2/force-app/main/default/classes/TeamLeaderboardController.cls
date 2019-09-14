@@ -15,7 +15,7 @@ public with sharing class TeamLeaderboardController {
     }  
 
    
-    public static Team[] sortArray( List<Team> passedTeam) {
+    public static void sortArray( List<Team> passedTeam) {
 
         Integer i, j;
 
