@@ -1,0 +1,18 @@
+<apex:component controller="MostRecentQuiz">
+<apex:pageBlock>
+        <apex:pageBlockTable value="{!Quizzes}" var="Quiz">
+            <apex:column>
+                <apex:facet name="header">Name</apex:facet>
+                <apex:outputText value = "{!Quiz.Name}"/>
+            </apex:column>
+            <apex:column>
+                <apex:facet name="header">Score</apex:facet>
+                <apex:outputText value = "{!Quiz.Score__c}"/>
+            </apex:column>
+            <apex:column>
+                <apex:facet name="header">Date</apex:facet>
+                <apex:outputText value = "{!Quiz.CreatedById}"/>
+            </apex:column>
+        </apex:pageBlockTable>
+</apex:pageBlock>
+</apex:component>
