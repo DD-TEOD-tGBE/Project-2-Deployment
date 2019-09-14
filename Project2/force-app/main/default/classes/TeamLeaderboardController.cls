@@ -15,7 +15,7 @@ public with sharing class TeamLeaderboardController {
     }  
 
    
-    public static void sortArray( List<Team> passedTeam) {
+    public static void sort( List<Team> passedTeam) {
 
         Integer i, j;
 
@@ -39,7 +39,7 @@ public with sharing class TeamLeaderboardController {
             //when all values have been moved up, we can insert the value we were holding onto.
             passedTeam[j+1]=key;
         }
-        return passedTeam;
+        
     }
 
 

@@ -96,6 +96,10 @@
         <enabled>false</enabled>
     </pageAccesses>
     <tabVisibilities>
+        <tab>AccountQuiz__c</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>Questions__c</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>

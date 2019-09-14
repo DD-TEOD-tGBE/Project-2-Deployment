@@ -38,9 +38,7 @@
         <name>CustomApplication</name>
     </types>
     <types>
-        <members>Questions__c</members>
-        <members>Quiz__c</members>
-        <members>AccountQuiz_c</members>
+        <members>*</members>
         <name>CustomTab</name>
     </types>
     <types>
