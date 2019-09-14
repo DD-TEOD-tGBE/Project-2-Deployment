@@ -65,6 +65,10 @@
         <members>Account.NumQuizzes__c</members>
         <name>CustomField</name>
     </types>
+    <types>
+        <members>*</members>
+        <name>Flow</name>
+    </types>
     <version>46.0</version>
 </Package>
 
