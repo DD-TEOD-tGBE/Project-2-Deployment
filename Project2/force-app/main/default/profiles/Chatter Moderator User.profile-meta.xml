@@ -34,6 +34,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Account.Ranking__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Account.TotalScore__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -65,6 +70,16 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Quiz__c.Avg_Score__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Quiz__c.Questions__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Quiz__c.Score__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
