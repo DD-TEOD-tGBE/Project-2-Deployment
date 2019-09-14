@@ -34,7 +34,7 @@
         <name>CustomObject</name>
     </types>
     <types>
-        <members>Quiz_Game</members>
+        <members>*</members>
         <name>CustomApplication</name>
     </types>
     <types>
@@ -42,7 +42,7 @@
         <name>CustomTab</name>
     </types>
     <types>
-        <members>Quiz_Game_UtilityBar</members>
+        <members>*</members>
         <name>FlexiPage</name>
     </types>
     <types>
