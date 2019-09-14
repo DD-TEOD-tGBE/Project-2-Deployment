@@ -78,6 +78,7 @@ f32e2e8 yesterday
     <types>
         <members>*</members>
         <name>StandardObject</name>
+    </types>
     <version>46.0</version>
 </Package>
 
