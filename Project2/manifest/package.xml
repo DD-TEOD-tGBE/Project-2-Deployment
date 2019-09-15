@@ -34,16 +34,15 @@
         <name>CustomObject</name>
     </types>
     <types>
-        <members>Quiz_Game</members>
+        <members>*</members>
         <name>CustomApplication</name>
     </types>
     <types>
-        <members>Questions__c</members>
-        <members>Quiz__c</members>
+        <members>*</members>
         <name>CustomTab</name>
     </types>
     <types>
-        <members>Quiz_Game_UtilityBar</members>
+        <members>*</members>
         <name>FlexiPage</name>
     </types>
     <types>
@@ -64,6 +63,10 @@
         <members>Account.Ranking__c</members>
         <members>Account.NumQuizzes__c</members>
         <name>CustomField</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Flow</name>
     </types>
     <version>46.0</version>
 </Package>

@@ -14,13 +14,13 @@ public with sharing class Team {
         score = 0;
 
         //get the id of the users in the chatter group
-        List<CollaborationGroupMember> teamMemberUsers = [SELECT MemberId FROM CollaborationGroupMember WHERE CollaborationGroupid= :Chattergroup ];
+        List<CollaborationGroupMember> teamMemberUsers = [SELECT id, MemberId FROM CollaborationGroupMember WHERE CollaborationGroupid= :Chattergroup.id];
         
         //for each user, find their account, and add to the list of team members
         for(CollaborationGroupMember cgm: teamMemberUsers)
         {
-            Account foundHim = [SELECT id, name, avgscore FROM Account WHERE AccountUser :cgm.userid];
-            score = score + foundHim.avgscore;
+            Account foundHim = [SELECT id, name, AvgScore__c FROM Account WHERE AccountUser__c = :cgm.id];
+            score = score + foundHim.AvgScore__c;
             members.add(foundHim);
         }
 
