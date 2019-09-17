@@ -1,3 +1,4 @@
+  
 public class QuizPageController {
 
 public string choice {get;set;}
@@ -7,13 +8,13 @@ public string choice {get;set;}
     integer score=0;
     integer totalRecs=0;
 
-    list<account> newAcc=[SELECT Id FROM account WHERE OwnerId = :UserInfo.getUserID() LIMIT 1];
+    list<account> newAcc=[SELECT Id,Name FROM account WHERE OwnerId = :UserInfo.getUserID() LIMIT 1];
 
       public QuizPageController() {
         q = [SELECT id, Name FROM Quiz__c LIMIT 1];
-        ques = [SELECT Name ,A__c,B__c,C__c,D__c,CorrectAnswer__c FROM Questions__c WHERE Quiz__c IN :q LIMIT :limitSize OFFSET :count ];
+        ques = [SELECT Name ,id,A__c,B__c,C__c,D__c,CorrectAnswer__c FROM Questions__c WHERE Quiz__c IN :q LIMIT :limitSize OFFSET :count ];
         totalrecs=ques.size();
-
+       
         
     }
 
@@ -51,17 +52,7 @@ public string choice {get;set;}
         return null;
     }
 
-    public PageReference next(){
-        if(choice == ques[count].CorrectAnswer__c){
-            score++;
-
-        System.debug('score:'+score);
-        }
-
-        count++;
-        choice=null;
-        return null;
-    }
+   
 
         public Boolean getNxt() {
         if(count> totalRecs-2)
@@ -83,15 +74,48 @@ public string choice {get;set;}
         return null;
     }
 
+     public PageReference next(){
+        if(choice == ques[count].CorrectAnswer__c){
+            score++;
+        }
+
+        if(choice == ques[count].CorrectAnswer__c){
+            QuestionsAccount__c newAccQues = new QuestionsAccount__c(name=newAcc[0].name + ' Question ' + (count+1), Choice__c=choice, Account__c=newAcc[0].id,Questions__c=Ques[count].id, Correct__c=true);
+            insert newAccQues;
+        }else{
+            QuestionsAccount__c newAccQues = new QuestionsAccount__c(name=newAcc[0].name + ' Question ' + (count+1), Choice__c=choice, Account__c=newAcc[0].id,Questions__c=Ques[count].id, Correct__c=false);
+            insert newAccQues;
+        }
+
+        count++;
+        choice=null;
+        return null;
+    }
+
     public void submit(){
         if(choice == ques[count].CorrectAnswer__c){
             score++;
         }
-        System.debug('score:'+score);
-        System.debug('final'+ques.size());
-        AccountQuiz__c newAccQuiz = new AccountQuiz__c(name='test', Account__c=newAcc[0].Id, Quiz__c=q[0].id,Score__c=((score*100/ques.size())));
+
+        if(choice == ques[count].CorrectAnswer__c){
+            QuestionsAccount__c newAccQues = new QuestionsAccount__c(name=newAcc[0].name + ' Question ' + (count+1),Choice__c=choice, Account__c=newAcc[0].id,Questions__c=Ques[count].id, Correct__c=true);
+            insert newAccQues;
+        }else{
+            QuestionsAccount__c newAccQues = new QuestionsAccount__c(name=newAcc[0].name + ' Question ' + (count+1),Choice__c=choice, Account__c=newAcc[0].id,Questions__c=Ques[count].id, Correct__c=false);
+            insert newAccQues;
+        }
+        
+        AccountQuiz__c newAccQuiz = new AccountQuiz__c(name=q[0].name+newAcc[0].name, Account__c=newAcc[0].Id, Quiz__c=q[0].id,Score__c=(score*100/ques.size()));
         insert newAccQuiz;
 
         
     }
+    
+
+
+
+ 
+
+
+
 }
