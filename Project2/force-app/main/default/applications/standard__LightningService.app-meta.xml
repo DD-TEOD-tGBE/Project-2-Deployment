@@ -14,13 +14,9 @@
     <tabs>standard-home</tabs>
     <tabs>Quiz__c</tabs>
     <tabs>Questions__c</tabs>
-    <tabs>AccountQuiz__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LightningService_UtilityBar</utilityBar>
     <workspaceConfig>
-        <mappings>
-            <tab>AccountQuiz__c</tab>
-        </mappings>
         <mappings>
             <tab>Questions__c</tab>
         </mappings>

@@ -181,11 +181,7 @@
     <tabs>standard-Lead</tabs>
     <tabs>Quiz__c</tabs>
     <tabs>Questions__c</tabs>
-    <tabs>AccountQuiz__c</tabs>
     <workspaceConfig>
-        <mappings>
-            <tab>AccountQuiz__c</tab>
-        </mappings>
         <mappings>
             <tab>Questions__c</tab>
         </mappings>
