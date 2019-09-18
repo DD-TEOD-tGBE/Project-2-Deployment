@@ -1,9 +1,9 @@
 <apex:component controller="TeamLeaderboardController">
         <apex:dataTable value="{!TeamList}" var="Team">
-            <apex:column>
+            <apex:column >
                 <apex:outputText value="Team.Collaborationgroup.Name" />
             </apex:column>
-            <apex:column>
+            <apex:column >
                 <apex:outputText value="Team.Score" />
             </apex:column>
         </apex:dataTable>

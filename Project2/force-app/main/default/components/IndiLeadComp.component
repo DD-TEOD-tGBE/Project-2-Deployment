@@ -3,18 +3,18 @@
 
 <apex:pageBlock title="Your rank!">
     <apex:pageBlockTable value="{!myAccount}" var="a">
-        <apex:column value="{!a.ranking__c}" />
+        <apex:column value="{!a.Ranking__c}" />
         <apex:column value="{!a.name}" />
-        <apex:column value="{!a.Total_Score__c}" />
+        <apex:column value="{!a.TotalScore__c}" />
     </apex:pageBlockTable>
 </apex:pageBlock>
 
 
 <apex:pageBlock title="Top players">
     <apex:pageBlockTable value="{!Account}" var="a">
-        <apex:column value="{!a.ranking__c}" />
+        <apex:column value="{!a.Ranking__c}" />
         <apex:column value="{!a.name}" />
-        <apex:column value="{!a.Total_Score__c}" />
+        <apex:column value="{!a.TotalScore__c}" />
     </apex:pageBlockTable>
 </apex:pageBlock>
 

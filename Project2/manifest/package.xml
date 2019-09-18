@@ -61,6 +61,7 @@
         <members>Account.AvgScore__c</members>
         <members>Account.TotalScore__c</members>
         <members>Account.Ranking__c</members>
+        <members>Account.AccountUser__c</members>
         <members>Account.NumQuizzes__c</members>
         <name>CustomField</name>
     </types>
