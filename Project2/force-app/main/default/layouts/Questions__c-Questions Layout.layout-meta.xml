@@ -35,11 +35,11 @@
                 <field>D__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>Right_Answer__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>Wrong_Answer_1__c</field>
             </layoutItems>
             <layoutItems>

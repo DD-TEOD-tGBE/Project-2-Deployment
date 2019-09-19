@@ -1,19 +1,19 @@
-  
+@TestVisible
 public class QuizPageController {
 
 public string choice {get;set;}
 
-    integer count=0;
-    integer limitSize=10;
-    integer score=0;
-    integer totalRecs=0;
+    @TestVisible integer count=0;
+    @TestVisible integer limitSize=10;
+    @TestVisible integer score=0;
+    @TestVisible integer totalRecs=0;
 
     list<account> newAcc=[SELECT Id,Name FROM account WHERE OwnerId = :UserInfo.getUserID() LIMIT 1];
 
       public QuizPageController() {
         q = [SELECT id, Name FROM Quiz__c LIMIT 1];
         ques = [SELECT Name ,id,A__c,B__c,C__c,D__c,CorrectAnswer__c FROM Questions__c WHERE Quiz__c IN :q LIMIT :limitSize OFFSET :count ];
-        totalrecs=ques.size();
+        totalRecs=ques.size();
        
         
     }
@@ -46,16 +46,16 @@ public string choice {get;set;}
     }
     
 
-    
+ /*   
     public PageReference Q1(){
         count=0;
         return null;
     }
 
-   
+   */
 
         public Boolean getNxt() {
-        if(count> totalRecs-2)
+        if(count== totalRecs-1)
        		return true;
      	else
        		return false;     
@@ -68,11 +68,11 @@ public string choice {get;set;}
                 return true;
             }
         }
-
+/*
     public PageReference previous(){
         count--;
         return null;
-    }
+    }*/
 
      public PageReference next(){
         if(choice == ques[count].CorrectAnswer__c){

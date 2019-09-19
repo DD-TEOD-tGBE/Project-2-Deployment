@@ -1,4 +1,4 @@
-<apex:page controller="LeaderboardController">
+<apex:page >
         <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
             <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet"/>
@@ -16,7 +16,7 @@
             <body>
                 <div style="text-align:center"><h1>Leaderboard</h1></div>
 
-                <c:IndiLeadComp/>
+                <c:IndiLeadComp />
 
 
             </body>
