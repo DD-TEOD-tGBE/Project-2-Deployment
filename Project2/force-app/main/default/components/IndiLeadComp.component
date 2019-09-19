@@ -5,7 +5,7 @@
     <apex:pageBlockTable value="{!myAccount}" var="a">
         <apex:column value="{!a.ranking__c}" />
         <apex:column value="{!a.name}" />
-        <apex:column value="{!a.Total_Score__c}" />
+        <apex:column value="{!a.TotalScore__c}" />
     </apex:pageBlockTable>
 </apex:pageBlock>
 
@@ -14,7 +14,7 @@
     <apex:pageBlockTable value="{!Account}" var="a">
         <apex:column value="{!a.ranking__c}" />
         <apex:column value="{!a.name}" />
-        <apex:column value="{!a.Total_Score__c}" />
+        <apex:column value="{!a.TotalScore__c}" />
     </apex:pageBlockTable>
 </apex:pageBlock>
 
