@@ -3,5 +3,5 @@
     <apiVersion>46.0</apiVersion>
     <availableInTouch>false</availableInTouch>
     <confirmationTokenRequired>false</confirmationTokenRequired>
-    <label>PlayerProfile</label>
+    <label>Player_profile</label>
 </ApexPage>
