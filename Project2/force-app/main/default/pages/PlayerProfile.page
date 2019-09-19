@@ -14,15 +14,15 @@
             <body>
                 <div style="text-align:center"><h1>Profile</h1></div>
 
-    <apex:form>
+    <apex:form >
         <apex:pageBlock Title="Account Name">
-            <apex:pageBlockSection>
+            <apex:pageBlockSection >
                 <apex:outputField value="{!account.name}" />
             </apex:pageBlockSection>
         </apex:pageBlock>
 
         <apex:pageBlock Title="Other Info">
-            <apex:pageBlockSection>
+            <apex:pageBlockSection >
                 <apex:outputField value="{!account.description}" />
                 <apex:outputField value="{!account.phone}" />
                 <apex:outputField value="{!account.type}" />
@@ -36,7 +36,7 @@
             <!--<apex:relatedlist list="Quizzes__r"/>-->
     </apex:pageBlock>
 
-    <apex:form>
+    <apex:form >
         <apex:pageBlock Title="Your Average Quiz Score">
         </apex:pageBlock>
     </apex:form>

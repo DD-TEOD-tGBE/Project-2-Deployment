@@ -1,8 +1,5 @@
 public with sharing class indiLeadController {
 
-    public indiLeadController(){
-        
-    }
 
 
 
