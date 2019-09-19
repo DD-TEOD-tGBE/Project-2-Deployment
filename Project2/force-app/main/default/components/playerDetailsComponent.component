@@ -1,0 +1,28 @@
+<apex:component controller="AccountController">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	</head>
+    <style>
+    	legend{
+        	font-size: 25px;
+        }
+        .glyphicon .glyphicon-user{
+        	font-size: 50px;
+        }
+    </style>
+    <fieldset>
+        <legend><i class="glyphicon glyphicon-user"/> Player Account Info</legend>
+        <apex:dataTable value="{!ActiveAccount}" var="acct">
+        	<apex:column style="padding-right: 25px">
+                <apex:outputText value="Player Id: " /><apex:outputText value="{!acct.id}"/><br/><br/>
+    			<apex:outputText value="Player Name: "/><apex:outputText value="{!acct.name}"/><br/><br/>
+    			<apex:outputText value="Player Ranking: "/><apex:outputText value="{!acct.Ranking__c}"/><br/><br/>
+        	</apex:column>
+            <apex:column>
+    			<apex:outputText value="Number of Quizzes Taken: "/><apex:outputText value="{!acct.NumQuizzes__c}"/><br/><br/>
+    			<apex:outputText value="Average Score: "/><apex:outputText value="{!acct.AvgScore__c}"/><br/><br/>
+    			<apex:outputText value="Total Score: "/><apex:outputText value="{!acct.TotalScore__c}"/><br/><br/>
+            </apex:column>
+        </apex:dataTable>
+    </fieldset>
+</apex:component>
