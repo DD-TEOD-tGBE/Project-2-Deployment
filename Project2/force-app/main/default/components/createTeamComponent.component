@@ -1,0 +1,13 @@
+<apex:component controller="newTeamController" allowDML="true">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection title="Create a New Team">
+                <apex:pageBlockSectionItem >
+                    <!-- Assigns the variable NewName to what was entered on the  -->
+            		<apex:inputText value="{!newName}"/>
+                    <apex:commandButton action="{!newTeam}" value="Save Team"/>
+                </apex:pageBlockSectionItem>
+			</apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:component>
